@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    float precoEtiqueta, valorFinal;
+    int condicaoPagamento;
+
+    // Solicita ao usuário o preço do produto
+    printf("Digite o preco do produto: ");
+    scanf("%f", &precoEtiqueta);
+
+    // Solicita ao usuário a condicao de pagamento
+    printf("Escolha a condicao de pagamento:\n");
+    printf("1 - A vista em dinheiro ou cheque (10%% de desconto)\n");
+    printf("2 - A vista no cartao de credito (15%% de desconto)\n");
+    printf("3 - Em duas vezes (preco normal)\n");
+    printf("4 - Em duas vezes com juros de 10%%\n");
+    printf("Digite o codigo da condicao: ");
+    scanf("%d", &condicaoPagamento);
+
+    // Calcula o valor final com base na condição de pagamento escolhida
+    switch (condicaoPagamento) {
+        case 1:
+            valorFinal = precoEtiqueta * 0.90;  // 10% de desconto
+            printf("Valor final: R$%.2f\n", valorFinal);
+            break;
+        case 2:
+            valorFinal = precoEtiqueta * 0.85;  // 15% de desconto
+            printf("Valor final: R$%.2f\n", valorFinal);
+            break;
+        case 3:
+            valorFinal = precoEtiqueta;  // Preço normal
+            printf("Valor final: R$%.2f\n", valorFinal);
+            break;
+        case 4:
+            valorFinal = precoEtiqueta * 1.10;  // 10% de juros
+            printf("Valor final: R$%.2f\n", valorFinal);
+            break;
+        default:
+            printf("Erro: Condicao de pagamento invalida.\n");
+    }
+
+    return 0;
+}
