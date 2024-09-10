@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char letra;
+
+    // Solicita ao usuário uma letra
+    printf("Digite uma letra minuscula: ");
+    scanf("%c", &letra);
+
+    // Verifica se a letra é uma vogal
+    if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+        printf("A letra '%c' é uma vogal.\n", letra);
+    } else {
+        printf("A letra '%c' não é uma vogal.\n", letra);
+    }
+
+    return 0;
+}
